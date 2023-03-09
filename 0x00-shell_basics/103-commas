@@ -1,2 +1,2 @@
 #!/bin/bash
-{ ls -1AFv | awk '{printf "%s,", $0}' | sed 's/\([^\/]\)$/\1\//'; echo; } | { sed 's/^\.\///' | sed 's/\.\.\///'; echo; } | { sed -E 's/([a-zA-Z])/\\\1/g' | sed -E 's/([0-9])/\\\1/g' | sed -E 's/^((\.\.\/|\..\/)?)/\n\1/g' | sort -df; echo; } | sed 's/,$/\//' && echo
+for i in * .*; do printf '%s,' "$i"; done
