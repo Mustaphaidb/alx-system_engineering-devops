@@ -1,2 +1,2 @@
 #!/bin/bash
-for i in * .*; do printf '%s,' "$i"; done
+ls -amvp
